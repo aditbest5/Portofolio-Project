@@ -9,6 +9,7 @@ import { CSSTransition } from "react-transition-group";
 import { useState, useEffect } from "react";
 import DataProject from "./pages/DataProject";
 import BackEndProject from "./pages/BackEnd";
+import NotFound from "./pages/NotFound";
 function App() {
   const [showComponent, setShowComponent] = useState(false);
   useEffect(() => {
@@ -23,6 +24,14 @@ function App() {
         unmountOnExit
       >
         <Routes>
+          <Route
+            path="*"
+            element={
+              <Layout>
+                <NotFound />
+              </Layout>
+            }
+          />
           <Route
             path="/"
             element={
