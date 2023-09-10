@@ -124,7 +124,9 @@ export default function Project() {
                 have been worked on in the past few months. The project uses
                 reactjs framework and OOP PHP.
               </p>
-              <Button color="primary">See Detail</Button>
+              <Link to="/front-end">
+                <Button color="primary">See Detail</Button>
+              </Link>
             </div>
           </Hero.Content>
         </Hero>

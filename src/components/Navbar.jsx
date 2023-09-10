@@ -63,7 +63,7 @@ export default function MyNavbar() {
                   open={open}
                 >
                   <Menu.Item>
-                    <Link>Front End</Link>
+                    <Link to="/front-end">Front End</Link>
                   </Menu.Item>
                   <Menu.Item>
                     <Link to="/back-end">Back End</Link>
@@ -93,7 +93,7 @@ export default function MyNavbar() {
                   </summary>
                   <ul className="p-2 bg-base-100 w-32">
                     <li>
-                      <Link>Front End</Link>
+                      <Link to="/front-end">Front End</Link>
                     </li>
                     <li>
                       <Link to="/back-end">Back End</Link>
@@ -121,7 +121,7 @@ export default function MyNavbar() {
           </Link>
         </Navbar.Center>
         <Navbar.End className="navbar-end">
-          <span className="sm:pr-5 pr-2">Time:</span>
+          <span className="pr-2">Time:</span>
           <Countdown value={hours} />:
           <Countdown value={minutes} />:
           <Countdown value={seconds} />

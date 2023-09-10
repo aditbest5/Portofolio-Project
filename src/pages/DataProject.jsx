@@ -21,7 +21,7 @@ export default function DataProject() {
             <img
               alt="Data Science"
               src="./assets/Data-Science.jpg"
-              className="max-w-xs rounded-lg shadow-2xl"
+              className="sm:max-w-2xl rounded-lg shadow-2xl w-96"
             />
             <div className="mx-0 px-0">
               <h1 className="text-5xl font-bold">About Data Science Project</h1>

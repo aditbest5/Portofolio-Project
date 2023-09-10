@@ -38,13 +38,17 @@ export default function About() {
             </div>
             <div className="flex flex-row justify-items-center">
               <span className="font-mono py-2 text-2xl text-teal-50 text-center sm:text-justify">
-                A junior web developer and data analyst who has worked on
-                various projects. Familiar with various frameworks such as
-                Laravel, ReactJS, and ExpressJS and familiar with SQL and NoSQL
-                databases. Machine learning projects that have been done are
-                sentiment analysis, churn classification, and forecasting. In
-                addition, deep learning projects that have been done are object
-                detection and face detection.
+                I am a graduate of electrical engineering from Indonesia
+                Institute of Technology campus. A junior web developer and data
+                analyst who has worked on various projects. Familiar with
+                various frameworks such as Laravel, ReactJS, and ExpressJS and
+                familiar with SQL and NoSQL databases. Machine learning projects
+                that have been done are sentiment analysis, churn
+                classification, and forecasting. In addition, deep learning
+                projects that have been done are object detection and face
+                detection. My other skill is to create an internet of things
+                project that can be useful for controlling devices remotely
+                either wirelessly.
               </span>
             </div>
             <Link to="/projects">
@@ -106,7 +110,7 @@ export default function About() {
                     <p className="text-xl pb-6 text-start">
                       Program: Job Connector Web Development
                     </p>
-                    <div className="sm:flex sm:flex-row sm:justify-items-start sm:gap-4">
+                    <div className="flex flex-row justify-items-start gap-4">
                       <Link to="https://purwadhika.com/" target="_blank">
                         <Button className="sm:mt-10" color="primary">
                           Click Here
@@ -136,7 +140,7 @@ export default function About() {
                     <p className="text-xl pb-6 text-start">
                       Program: Fullstack Data Science
                     </p>
-                    <div className="sm:flex sm:flex-row sm:justify-items-start sm:gap-4">
+                    <div className="flex flex-row justify-items-start gap-4">
                       <Link to="https://fstbangalore.com/" target="_blank">
                         <Button className="sm:mt-10" color="primary">
                           Click Here
@@ -166,7 +170,7 @@ export default function About() {
                     <p className="text-xl pb-6 text-start">
                       Program: Big Data Using Python
                     </p>
-                    <div className="sm:flex sm:flex-row sm:justify-items-start sm:gap-4">
+                    <div className="flex flex-row justify-items-start gap-4">
                       <Link
                         to="https://digitalent.kominfo.go.id/"
                         target="_blank"
@@ -211,7 +215,7 @@ export default function About() {
                     <p className="text-xl pb-6 text-start">
                       Program 5: Machine Learning & Public Opinion Analysis
                     </p>
-                    <div className="sm:flex sm:flex-row sm:justify-items-start sm:gap-4">
+                    <div className="flex flex-row justify-items-start gap-4">
                       <Link to="https://sanbercode.com/" target="_blank">
                         <Button className="sm:mt-10" color="primary">
                           Click Here

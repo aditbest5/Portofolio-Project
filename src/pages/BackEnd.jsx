@@ -21,7 +21,7 @@ export default function BackEndProject() {
             <img
               alt="Back End"
               src="./assets/Back-End.png"
-              className="sm:max-w-xs rounded-lg shadow-2xl w-60"
+              className="sm:max-w-2xl rounded-lg shadow-2xl w-96"
             />
             <div className="mx-0 px-0">
               <h1 className="sm:text-5xl text-3xl font-bold">
@@ -194,13 +194,13 @@ export default function BackEndProject() {
                 className="sm:max-w-xl self-center max-w-xs"
               />
             </div>
-            <div className="self-center sm:flex sm:flex-row sm:gap-30 flex flex-col gap-10">
-              <ul>
-                <h1 className="text-start font-semibold text-2xl">
-                  There are 5 endpoint:
-                </h1>
-                <li>
-                  <ul className="text-start list-outside list-decimal ml-8 flex flex-col gap-5">
+            <div className="self-center sm:flex sm:flex-col sm:gap-30 flex flex-col gap-10">
+              <h1 className="text-center font-semibold text-2xl">
+                There are 5 endpoint:
+              </h1>
+              <div>
+                <ul className="text-start list-outside list-decimal ml-8 flex flex-col gap-5 sm:flex sm:flex-row sm:gap-36">
+                  <div className="flex flex-col gap-10">
                     <li>
                       <h1>
                         <b>GET</b> /api/movies
@@ -269,23 +269,20 @@ export default function BackEndProject() {
                         </pre>
                       </div>
                     </li>
-                  </ul>
-                </li>
-              </ul>
-              <div>
-                <ul className="text-start list-outside list-decimal pt-8">
-                  <li>
-                    <h1>
-                      <b>POST</b> /api/peminjaman
-                    </h1>
-                    <div className="flex flex-col gap-5">
-                      <h2>Used to add and modify loan data</h2>
-                      <h2>Can only be accessed by admin</h2>
-                      <h2>Protected by JWT</h2>
-                      <h2>Schema Input pada Body:</h2>
-                      <h3>For new data:</h3>
-                      <pre>
-                        {`
+                  </div>
+                  <div className="flex flex-col gap-10">
+                    <li>
+                      <h1>
+                        <b>POST</b> /api/peminjaman
+                      </h1>
+                      <div className="flex flex-col gap-5">
+                        <h2>Used to add and modify loan data</h2>
+                        <h2>Can only be accessed by admin</h2>
+                        <h2>Protected by JWT</h2>
+                        <h2>Schema Input pada Body:</h2>
+                        <h3>For new data:</h3>
+                        <pre>
+                          {`
 {
   "aksi": "N",
   "peminjamanid: Null/None
@@ -295,11 +292,11 @@ export default function BackEndProject() {
     "status": ...,
   } 
 }`}
-                      </pre>
+                        </pre>
 
-                      <h3>For modify data:</h3>
-                      <pre>
-                        {`
+                        <h3>For modify data:</h3>
+                        <pre>
+                          {`
 {
   "aksi": "E"
   "peminjamanid":...
@@ -307,18 +304,19 @@ export default function BackEndProject() {
     "username": ...
   }
 }`}
-                      </pre>
-                    </div>
-                  </li>
-                  <li>
-                    <div className="flex flex-col gap-5">
-                      <h1>
-                        <b>POST</b> /api/token
-                      </h1>
-                      <h2>Used to request a new access token</h2>
-                      <h2>data used as payload: username, password</h2>
-                    </div>
-                  </li>
+                        </pre>
+                      </div>
+                    </li>
+                    <li>
+                      <div className="flex flex-col gap-5">
+                        <h1>
+                          <b>POST</b> /api/token
+                        </h1>
+                        <h2>Used to request a new access token</h2>
+                        <h2>data used as payload: username, password</h2>
+                      </div>
+                    </li>
+                  </div>
                 </ul>
               </div>
             </div>
