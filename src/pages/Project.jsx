@@ -125,7 +125,12 @@ export default function Project() {
                 reactjs framework and OOP PHP.
               </p>
               <Link to="/front-end">
-                <Button color="primary">See Detail</Button>
+                <Button
+                  color="secondary"
+                  className="text-l shadow-2xl font-bold hover:animate-bounce hover:h-14 hover:w-32 hover:bg-cyan-800"
+                >
+                  See Detail
+                </Button>
               </Link>
             </div>
           </Hero.Content>
@@ -146,7 +151,12 @@ export default function Project() {
                 framework
               </p>
               <Link to="/back-end">
-                <Button color="primary">See Detail</Button>
+                <Button
+                  color="secondary"
+                  className="shadow-2xl font-bold hover:animate-bounce hover:h-14 hover:w-32 hover:bg-cyan-800"
+                >
+                  See Detail
+                </Button>
               </Link>
             </div>
           </Hero.Content>
@@ -166,7 +176,12 @@ export default function Project() {
                 internet of things devices using arduino uno/mega and ESP32. The
                 final project of my lecture is also contained in this project.
               </p>
-              <Button color="primary">See Detail</Button>
+              <Button
+                color="secondary"
+                className="shadow-2xl font-bold hover:animate-bounce hover:h-14 hover:w-32 hover:bg-cyan-800"
+              >
+                See Detail
+              </Button>
             </div>
           </Hero.Content>
         </Hero>
@@ -186,7 +201,12 @@ export default function Project() {
                 projects that I have worked on over the past few years.
               </p>
               <Link to="/data-science">
-                <Button color="primary">See Detail</Button>
+                <Button
+                  color="secondary"
+                  className="shadow-2xl font-bold hover:animate-bounce hover:h-14 hover:w-32 hover:bg-cyan-800"
+                >
+                  See Detail
+                </Button>
               </Link>
             </div>
           </Hero.Content>

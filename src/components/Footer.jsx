@@ -1,4 +1,4 @@
-import { Footer } from "react-daisyui";
+import { Footer, Avatar } from "react-daisyui";
 import { Link } from "react-router-dom";
 import { CSSTransition } from "react-transition-group";
 import { useState, useEffect } from "react";
@@ -109,10 +109,41 @@ export default function MyFooter() {
             PLC
           </Link>
         </div>
-        <div>
+        <div className="p-0">
           <Footer.Title>Address</Footer.Title>
-          <p className="text-sm">Jl. Dasana Indah Blok UC 18 No 6</p>
-          <p className="text-sm"> Bojong Nangka District, Tangerang District</p>
+          <h1 className="text-sm">Jl. Dasana Indah Blok UC 18 No 6</h1>
+          <h1 className="text-sm">
+            Bojong Nangka District, Tangerang District
+          </h1>
+        </div>
+        <div>
+          <Link
+            to="https://github.com/aditbest5/Portofolio-Project"
+            target="_blank"
+          >
+            <Footer.Title>
+              <Avatar
+                borderColor="success"
+                title="Github"
+                shape="rounded"
+                size={100}
+                src="./assets/github.png"
+              />
+            </Footer.Title>
+          </Link>
+        </div>
+        <div>
+          <Link to="https://gitlab.com/adityaaprianto97" target="_blank">
+            <Footer.Title>
+              <Avatar
+                borderColor="success"
+                title="Gitlab"
+                shape="rounded"
+                size={100}
+                src="./assets/gitlab.png"
+              />
+            </Footer.Title>
+          </Link>
         </div>
       </Footer>
     </CSSTransition>

@@ -28,7 +28,7 @@ export default function MyNavbar() {
   const seconds = currentTime.getSeconds();
   return (
     <div>
-      <Navbar dataTheme={"aqua"} className="z-[50] fixed top-0 left-0 right-0">
+      <Navbar className="z-[50] fixed top-0 left-0 right-0 bg-gradient-to-br from-rose-200 to-gray-300">
         <Navbar.Start>
           <Dropdown className="lg:hidden">
             <Button
