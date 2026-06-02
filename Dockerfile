@@ -24,8 +24,8 @@ FROM nginx:alpine
 # Copy the build output to replace the default nginx contents
 COPY --from=builder /app/build /usr/share/nginx/html
 
-# Expose port 80
-EXPOSE 80
+# Expose port 3000
+EXPOSE 3000
 
 # Start Nginx server
 CMD ["nginx", "-g", "daemon off;"]
