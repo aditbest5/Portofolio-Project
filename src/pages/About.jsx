@@ -76,7 +76,7 @@ export default function About() {
                   />
                   <div className="sm:flex sm:flex-col">
                     <p className="pt-6 text-3xl">
-                      Institut Teknologi Indonesia
+                      Indonesia Institute of Technology
                     </p>
                     <p className="text-xl pb-6 text-start">
                       Electrical Engineering - GPA 3.54
