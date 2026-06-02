@@ -77,4 +77,4 @@ jobs:
           docker rm porto-app || true
           
           echo "Menjalankan container baru..."
-          docker run -d --name porto-app -p 80:80 ${{ secrets.DOCKERHUB_USERNAME }}/porto-app:latest
+          docker run -d --name porto-app -p 3000:80 ${{ secrets.DOCKERHUB_USERNAME }}/porto-app:latest
