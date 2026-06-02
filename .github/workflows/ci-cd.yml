@@ -9,6 +9,7 @@ on:
       - main
 
 jobs:
+  # JOB 1: Dijalankan di server GitHub (gratis & tidak membebani server Anda)
   build-and-test:
     name: Build and Test
     runs-on: ubuntu-latest
@@ -28,16 +29,12 @@ jobs:
 
       - name: Build Project
         run: npm run build
-        
-      # Uncomment the following lines if you have unit tests set up
-      # - name: Run Tests
-      #   run: npm test -- --watchAll=false
 
+  # JOB 2: Dijalankan di server GitHub (gratis & tidak membebani server Anda)
   docker-build-and-push:
     name: Docker Build and Push
     needs: build-and-test
     runs-on: ubuntu-latest
-    # Only run this job if it's a push to the main branch (not for PRs)
     if: github.event_name == 'push' && github.ref == 'refs/heads/main'
     
     steps:
@@ -52,14 +49,6 @@ jobs:
         with:
           username: ${{ secrets.DOCKERHUB_USERNAME }}
           password: ${{ secrets.DOCKERHUB_TOKEN }}
-          
-      # Alternative: If you prefer using GitHub Container Registry (ghcr.io) instead of DockerHub
-      # - name: Login to GitHub Container Registry
-      #   uses: docker/login-action@v3
-      #   with:
-      #     registry: ghcr.io
-      #     username: ${{ github.actor }}
-      #     password: ${{ secrets.GITHUB_TOKEN }}
 
       - name: Build and Push Docker Image
         uses: docker/build-push-action@v5
@@ -67,32 +56,25 @@ jobs:
           context: .
           push: true
           tags: ${{ secrets.DOCKERHUB_USERNAME }}/porto-app:latest
-          # Alternative tag for ghcr.io:
-          # tags: ghcr.io/${{ github.repository }}/porto-app:latest
           cache-from: type=registry,ref=${{ secrets.DOCKERHUB_USERNAME }}/porto-app:buildcache
           cache-to: type=registry,ref=${{ secrets.DOCKERHUB_USERNAME }}/porto-app:buildcache,mode=max
 
+  # JOB 3: Dijalankan LANGSUNG di server Anda tanpa perlu akses SSH
   deploy:
     name: Deploy to Server
     needs: docker-build-and-push
-    runs-on: ubuntu-latest
+    runs-on: self-hosted # <--- Telah diubah menggunakan server Anda
     if: github.event_name == 'push' && github.ref == 'refs/heads/main'
     
     steps:
-      - name: Deploy via SSH
-        uses: appleboy/ssh-action@v1.0.3
-        with:
-          host: ${{ secrets.SERVER_HOST }}
-          username: ${{ secrets.SERVER_USERNAME }}
-          key: ${{ secrets.SERVER_SSH_KEY }}
-          # The script below assumes you have Docker installed on your target server
-          script: |
-            # Pull the latest image from DockerHub
-            docker pull ${{ secrets.DOCKERHUB_USERNAME }}/porto-app:latest
-            
-            # Stop and remove the old container if it exists
-            docker stop porto-app || true
-            docker rm porto-app || true
-            
-            # Run the new container, mapping port 80 of the host to port 80 of the container
-            docker run -d --name porto-app -p 80:80 ${{ secrets.DOCKERHUB_USERNAME }}/porto-app:latest
+      - name: Pull and Run Docker Container
+        run: |
+          echo "Menarik image terbaru dari DockerHub..."
+          docker pull ${{ secrets.DOCKERHUB_USERNAME }}/porto-app:latest
+          
+          echo "Menghentikan dan menghapus container lama (jika ada)..."
+          docker stop porto-app || true
+          docker rm porto-app || true
+          
+          echo "Menjalankan container baru..."
+          docker run -d --name porto-app -p 80:80 ${{ secrets.DOCKERHUB_USERNAME }}/porto-app:latest
