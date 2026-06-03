@@ -100,3 +100,24 @@ jobs:
 
           echo "Menjalankan container baru..."
           docker run -d --name porto-app -p 3000:80 ${{ secrets.DOCKERHUB_USERNAME }}/porto-app:latest
+
+  # JOB 4: Mengirimkan Notifikasi ke Discord
+  notify:
+    name: Discord Notification
+    needs: [build-and-test, docker-build-and-push, deploy]
+    if: always() && github.event_name == 'push' && github.ref == 'refs/heads/main'
+    runs-on: ubuntu-latest
+    steps:
+      - name: Send Success Notification
+        if: ${{ needs.deploy.result == 'success' }}
+        run: |
+          curl -H "Content-Type: application/json" \
+          -d '{"embeds": [{"title": "✅ Deployment Berhasil!", "description": "Aplikasi **Portofolio-Project** telah berhasil di-deploy ke server dengan sukses.", "color": 65280}]}' \
+          ${{ secrets.DISCORD_WEBHOOK_URL }}
+
+      - name: Send Failure Notification
+        if: ${{ contains(needs.*.result, 'failure') || contains(needs.*.result, 'cancelled') }}
+        run: |
+          curl -H "Content-Type: application/json" \
+          -d '{"embeds": [{"title": "❌ Deployment Gagal", "description": "Terjadi kesalahan saat mem-build atau men-deploy **Portofolio-Project**. Silakan cek log GitHub Actions untuk detailnya.", "color": 16711680}]}' \
+          ${{ secrets.DISCORD_WEBHOOK_URL }}
