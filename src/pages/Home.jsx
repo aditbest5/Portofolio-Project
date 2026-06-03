@@ -30,7 +30,7 @@ export default function Home() {
                 Hello!
               </Card.Title>
               <p className="sm:px-10 py-6 text-xl text-center font-medium leading-relaxed text-slate-600">
-                I'm Aditya Aprianto, A Web Developer, IoT Engineer and Data Analyst
+                I'm Aditya Aprianto, A Full Stack Engineer, IoT Engineer and Data Analyst
               </p>
               <Card.Actions className="justify-center w-full mt-4">
                 <Link to="/about">
