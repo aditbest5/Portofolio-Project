@@ -17,7 +17,7 @@ export default function FrontEndProject() {
     >
       <div className="pt-20">
         <Hero>
-          <Hero.Content className="xs:flex xs:flex-col w-9/12 bg-opacity-60 bg-cyan-200">
+          <Hero.Content className="xs:flex xs:flex-col w-9/12 bg-base-100 rounded-lg shadow-sm border border-base-200 p-8 my-8">
             <img
               alt="Front End"
               src="./assets/Front-End.jpg"
@@ -35,8 +35,8 @@ export default function FrontEndProject() {
           </Hero.Content>
         </Hero>
         <Divider>Social Media Web</Divider>
-        <Hero className="py-10">
-          <Hero.Content className="flex flex-col bg-slate-200">
+        <Hero className="py-10 bg-base-200">
+          <Hero.Content className="flex flex-col w-full max-w-6xl">
             <div className="flex flex-col">
               <h1 className="text-4xl font-bold">Social Media Web</h1>
               <h1 className="text-xl font-semibold sm:px-48 py-10">
@@ -216,7 +216,7 @@ export default function FrontEndProject() {
                 to="https://github.com/aditbest5/Front-End-Project"
                 target="_blank"
               >
-                <Button color="primary">GO TO REPOSITORY</Button>
+                <Button color="primary" className="text-md shadow-sm font-semibold rounded-full hover:shadow-md transition-all duration-300 px-8">GO TO REPOSITORY</Button>
               </Link>
             </div>
           </Hero.Content>

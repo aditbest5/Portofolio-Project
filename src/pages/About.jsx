@@ -15,7 +15,7 @@ export default function About() {
       classNames="fade"
       unmountOnExit
     >
-      <div className="font-serif pt-16">
+      <div className="pt-16 bg-base-100 text-base-content">
         <Hero
           className="h-full"
           style={{
@@ -26,7 +26,7 @@ export default function About() {
           <Hero.Overlay />
           <Hero.Content className="text-center flex flex-col justify-evenly h-full">
             <div>
-              <h1 className="text-5xl font-bold text-slate-100">About Me</h1>
+              <h1 className="text-5xl font-bold text-white drop-shadow-md">About Me</h1>
             </div>
             <div>
               <Avatar
@@ -37,7 +37,7 @@ export default function About() {
               />
             </div>
             <div className="flex flex-row justify-items-center">
-              <span className="font-mono py-2 text-2xl text-teal-50 text-center sm:text-justify">
+              <p className="py-6 text-lg sm:text-xl text-slate-100 text-center sm:text-justify leading-relaxed max-w-4xl mx-auto font-medium drop-shadow-sm">
                 I am a graduate of electrical engineering from Indonesia
                 Institute of Technology campus. A junior web developer and data
                 analyst who has worked on various projects. Familiar with
@@ -49,14 +49,14 @@ export default function About() {
                 detection. My other skill is to create an internet of things
                 project that can be useful for controlling devices remotely
                 either wirelessly.
-              </span>
+              </p>
             </div>
             <Link to="/projects">
               <Button
                 color="primary"
-                className="text-l hover:animate-bounce font-bold hover:h-14 hover:w-48 hover:bg-cyan-800"
+                className="text-lg font-semibold rounded-full hover:shadow-md transition-all duration-300 px-8 bg-blue-600 hover:bg-blue-700 text-white border-none"
               >
-                GO TO PROJECT
+                GO TO PROJECTS
               </Button>
             </Link>
           </Hero.Content>

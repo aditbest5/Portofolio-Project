@@ -31,7 +31,7 @@ export default function MyFooter() {
       classNames="fade"
       unmountOnExit
     >
-      <Footer dataTheme={"aqua"} className="p-10">
+      <Footer className="p-10 bg-base-200 text-base-content mt-10">
         <div>
           <p className="py-8 text-lg font-bold">Build With</p>
           <div className="flex flex-row justify-between">

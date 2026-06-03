@@ -14,30 +14,28 @@ export default function Home() {
       classNames="fade"
       unmountOnExit
     >
-      <div className="font-serif bg-gradient-to-bl from-slate-200 to-stone-300 pt-32">
-        <div className="flex flex-row items-center justify-center h-160 sm:h-200">
-          <Card className="h-128 w-5/6 sm:w-5/12 sm:h-160 bg-orange-300 transition-opacity duration-300 shadow-2xl">
+      <div className="bg-base-100 text-base-content pt-32">
+        <div className="flex flex-row items-center justify-center h-auto sm:h-auto pb-20">
+          <Card className="w-5/6 sm:w-5/12 bg-base-200 text-base-content transition-all duration-300 shadow-md hover:shadow-lg border-none overflow-hidden">
             <Card.Image
-              className="sm:h-160 h-96"
+              className="h-96 sm:h-[32rem] object-cover"
               src="./assets/myfoto.png"
               alt="Photo Profile"
             />
             <Card.Body className="items-center text-center">
               <Card.Title
-                className="text-center text-4xl font-bold box-decoration-slice bg-gradient-to-r from-indigo-400 to-lime-400 text-white pr-8"
+                className="text-center text-4xl font-bold drop-shadow-sm mb-2 text-slate-700"
                 tag="h2"
               >
                 Hello!
               </Card.Title>
-              <p className=" sm:px-10 py-10 text-2xl text-center text-lime-900 font-semibold font-serif">
-                I'm Aditya Aprianto, A Web Developer, IoT Engineer and Data
-                Analyst
+              <p className="sm:px-10 py-6 text-xl text-center font-medium leading-relaxed text-slate-600">
+                I'm Aditya Aprianto, A Web Developer, IoT Engineer and Data Analyst
               </p>
-              <Card.Actions className="justify-end">
+              <Card.Actions className="justify-center w-full mt-4">
                 <Link to="/about">
                   <Button
-                    color="primary"
-                    className="bg-green-500 text-l shadow-2xl font-bold hover:animate-bounce hover:h-14 hover:w-32 hover:bg-cyan-800"
+                    className="text-lg shadow-md font-bold rounded-full hover:shadow-lg transition-all duration-300 px-10 bg-sky-400 text-white hover:bg-sky-500 border-none"
                   >
                     About Me
                   </Button>
@@ -47,9 +45,8 @@ export default function Home() {
           </Card>
         </div>
 
-        <Hero className="py-4 transition ease-in duration-300 bg-gradient-to-tr from-red-300 to-orange-400">
-          <Hero.Overlay className="bg-gradient-to-tr from-red-300 to-orange-400" />
-          <Hero.Content className="py-20 sm:py-32 bg-gradient-to-tr from-red-300 to-orange-400">
+        <Hero className="py-12 transition-all duration-300 bg-base-200">
+          <Hero.Content className="py-16 sm:py-24 w-full max-w-6xl">
             <div>
               <div>
                 <h1 className="text-3xl sm:text-5xl font-bold">Profile</h1>
@@ -96,12 +93,12 @@ export default function Home() {
             </div>
           </Hero.Content>
         </Hero>
-        <Hero className="py-4 transition ease-in duration-300 bg-gradient-to-tr bg-slate-300">
-          <div className="flex flex-col gap-10 py-10">
-            <h1 className="font-bold text-3xl">Skills:</h1>
-            <Card className="w-full bg-gradient-to-tr from-orange-300 to-red-300 transition-opacity duration-300 shadow-2xl">
-              <Card.Body className="items-center text-center">
-                <div className="grid sm:grid-cols-4 sm:gap-4 grid-cols-3">
+        <Hero className="py-16 transition-all duration-300 bg-base-100">
+          <div className="flex flex-col gap-10 py-10 w-full max-w-6xl px-4 sm:px-0">
+            <h1 className="font-bold text-4xl text-center text-blue-600 mb-8">Skills</h1>
+            <Card className="w-full bg-base-100 border border-base-200 transition-all duration-300 shadow-sm hover:shadow-md">
+              <Card.Body className="items-center text-center p-8 sm:p-12">
+                <div className="grid sm:grid-cols-5 gap-8 grid-cols-3 place-items-center">
                   <div>
                     <Avatar
                       borderColor="success"
@@ -287,24 +284,24 @@ export default function Home() {
             </Card>
           </div>
         </Hero>
-        <Card className="h-fit bg-slate-300 transition-opacity duration-300">
-          <Card.Body className="items-center text-center">
+        <Card className="mt-16 mb-20 max-w-4xl mx-auto bg-blue-50/50 border border-blue-100 transition-all duration-300 shadow-sm hover:shadow-md">
+          <Card.Body className="items-center text-center py-16">
             <Card.Title
-              className="text-center text-2xl sm:text-5xl font-bold box-decoration-slice  bg-gradient-to-r from-indigo-400 to-lime-400 text-white pr-8"
+              className="text-center text-3xl sm:text-4xl font-bold text-blue-600"
               tag="h2"
             >
               Wanna See My Projects?
             </Card.Title>
-            <p className="sm:mx-36 sm:px-24 py-10 text-l sm:text-xl text-lime-900 font-semibold">
-              Please Click The Button Below
+            <p className="sm:mx-36 py-6 text-lg sm:text-xl text-slate-600 font-medium">
+              Explore my latest works and what I have built.
             </p>
-            <Card.Actions className="justify-end hover:animate-bounce">
+            <Card.Actions className="justify-center mt-6">
               <Link to="/projects">
                 <Button
                   color="primary"
-                  className="text-l font-bold hover:h-14 hover:w-48 hover:bg-cyan-800"
+                  className="text-lg shadow-sm font-semibold rounded-full hover:shadow-md transition-all duration-300 px-10"
                 >
-                  Go To My Project
+                  Go To My Projects
                 </Button>
               </Link>
             </Card.Actions>

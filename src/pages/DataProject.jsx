@@ -17,7 +17,7 @@ export default function DataProject() {
     >
       <div className="pt-20">
         <Hero>
-          <Hero.Content className="xs:flex xs:flex-col w-9/12 bg-opacity-60 bg-cyan-200">
+          <Hero.Content className="xs:flex xs:flex-col w-9/12 bg-base-100 rounded-lg shadow-sm border border-base-200 p-8 my-8">
             <img
               alt="Data Science"
               src="./assets/Data-Science.jpg"
@@ -35,8 +35,8 @@ export default function DataProject() {
           </Hero.Content>
         </Hero>
         <Divider>Churn</Divider>
-        <Hero className="py-10">
-          <Hero.Content className="flex flex-col bg-slate-200">
+        <Hero className="py-10 bg-base-200">
+          <Hero.Content className="flex flex-col w-full max-w-6xl">
             <div className="flex flex-col">
               <h1 className="text-4xl font-bold">Churn Analysis Data</h1>
               <h1 className="text-xl font-semibold sm:px-48 py-10">
@@ -280,14 +280,14 @@ export default function DataProject() {
                 to="https://drive.google.com/file/d/1oSh3MJXr-MwtZkzoVuqVW7VNZOk7bull/view?usp=sharing"
                 target="_blank"
               >
-                <Button color="primary">GO TO FILE</Button>
+                <Button color="primary" className="text-md shadow-sm font-semibold rounded-full hover:shadow-md transition-all duration-300 px-8">GO TO FILE</Button>
               </Link>
             </div>
           </Hero.Content>
         </Hero>
         <Divider>Public Opinion</Divider>
-        <Hero className="py-10">
-          <Hero.Content className="flex flex-col bg-gray-400">
+        <Hero className="py-10 bg-base-100">
+          <Hero.Content className="flex flex-col w-full max-w-6xl">
             <div className="flex flex-col">
               <h1 className="text-4xl font-bold">Public Opinion Analysis</h1>
               <h1 className="text-xl font-semibold sm:px-48 py-10">
@@ -306,7 +306,7 @@ export default function DataProject() {
             <div className="self-start">
               <div className="flex flex-row justify-start my-10">
                 <h1 className="font-semibold text-2xl">
-                  <i>Web Scrapping</i> --> Using Twitter API
+                  <i>Web Scrapping</i> Using Twitter API
                 </h1>
               </div>
               <div className="sm:flex sm:flex-row sm:justify-around flex flex-col justify-around">
@@ -398,7 +398,7 @@ export default function DataProject() {
                 to="https://drive.google.com/drive/folders/1svqhBozyfG-OeH2yIpf7YlyFaR3QRCZi?usp=sharing"
                 target="_blank"
               >
-                <Button color="primary">GO TO FILE</Button>
+                <Button color="primary" className="text-md shadow-sm font-semibold rounded-full hover:shadow-md transition-all duration-300 px-8">GO TO FILE</Button>
               </Link>
             </div>
           </Hero.Content>

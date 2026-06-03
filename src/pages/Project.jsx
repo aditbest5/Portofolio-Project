@@ -34,8 +34,8 @@ export default function Project() {
       unmountOnExit
     >
       <div>
-        <Hero className="pt-16">
-          <Hero.Overlay className="bg-opacity-60 bg-stone-100" />
+        <Hero className="pt-16 bg-base-100">
+          <Hero.Overlay className="bg-opacity-0" />
           <Hero.Content className="text-center">
             <div className="max-w-4xl flex flex-col justify-between gap-10">
               <h1 className="text-4xl font-bold">Welcome to My Project</h1>
@@ -109,7 +109,7 @@ export default function Project() {
             </div>
           </Hero.Content>
         </Hero>
-        <Hero ref={scrollRef} className="bg-opacity-60 bg-yellow-300">
+        <Hero ref={scrollRef} className="py-10 bg-base-200">
           <Hero.Content className="flex-col">
             <img
               alt="Front End"
@@ -126,8 +126,8 @@ export default function Project() {
               </p>
               <Link to="/front-end">
                 <Button
-                  color="secondary"
-                  className="text-l shadow-2xl font-bold hover:animate-bounce hover:h-14 hover:w-32 hover:bg-cyan-800"
+                  color="primary"
+                  className="text-md shadow-sm font-semibold rounded-full hover:shadow-md transition-all duration-300 px-8"
                 >
                   See Detail
                 </Button>
@@ -135,7 +135,7 @@ export default function Project() {
             </div>
           </Hero.Content>
         </Hero>
-        <Hero className="bg-opacity-60 bg-slate-600">
+        <Hero className="py-10 bg-base-100">
           <Hero.Content className="flex-col">
             <img
               alt="Back End"
@@ -152,8 +152,8 @@ export default function Project() {
               </p>
               <Link to="/back-end">
                 <Button
-                  color="secondary"
-                  className="shadow-2xl font-bold hover:animate-bounce hover:h-14 hover:w-32 hover:bg-cyan-800"
+                  color="primary"
+                  className="text-md shadow-sm font-semibold rounded-full hover:shadow-md transition-all duration-300 px-8"
                 >
                   See Detail
                 </Button>
@@ -161,7 +161,7 @@ export default function Project() {
             </div>
           </Hero.Content>
         </Hero>
-        <Hero className="bg-opacity-60 bg-sky-400">
+        <Hero className="py-10 bg-blue-50/50">
           <Hero.Content className="flex-col">
             <img
               alt="Arduino IoT"
@@ -177,15 +177,15 @@ export default function Project() {
                 final project of my lecture is also contained in this project.
               </p>
               <Button
-                color="secondary"
-                className="shadow-2xl font-bold hover:animate-bounce hover:h-14 hover:w-32 hover:bg-cyan-800"
+                color="primary"
+                className="text-md shadow-sm font-semibold rounded-full hover:shadow-md transition-all duration-300 px-8"
               >
                 See Detail
               </Button>
             </div>
           </Hero.Content>
         </Hero>
-        <Hero className="bg-opacity-60 bg-cyan-200">
+        <Hero className="py-10 bg-base-100">
           <Hero.Content className="flex-col">
             <img
               alt="Data Science"
@@ -202,8 +202,8 @@ export default function Project() {
               </p>
               <Link to="/data-science">
                 <Button
-                  color="secondary"
-                  className="shadow-2xl font-bold hover:animate-bounce hover:h-14 hover:w-32 hover:bg-cyan-800"
+                  color="primary"
+                  className="text-md shadow-sm font-semibold rounded-full hover:shadow-md transition-all duration-300 px-8"
                 >
                   See Detail
                 </Button>

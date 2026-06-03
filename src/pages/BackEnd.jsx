@@ -17,7 +17,7 @@ export default function BackEndProject() {
     >
       <div className="pt-20">
         <Hero>
-          <Hero.Content className="xs:flex xs:flex-col w-9/12 bg-opacity-60 bg-cyan-200">
+          <Hero.Content className="xs:flex xs:flex-col w-9/12 bg-base-100 rounded-lg shadow-sm border border-base-200 p-8 my-8">
             <img
               alt="Back End"
               src="./assets/Back-End.png"
@@ -35,8 +35,8 @@ export default function BackEndProject() {
           </Hero.Content>
         </Hero>
         <Divider>Library API</Divider>
-        <Hero className="py-10">
-          <Hero.Content className="flex flex-col bg-slate-200">
+        <Hero className="py-10 bg-base-200">
+          <Hero.Content className="flex flex-col w-full max-w-6xl">
             <div className="flex flex-col">
               <h1 className="text-4xl font-bold">Library API</h1>
               <h1 className="text-xl font-semibold sm:px-48 py-10">
@@ -65,10 +65,10 @@ export default function BackEndProject() {
                         <b>Authentication</b>, Have 4 Endpoint:
                       </h1>
                       <ul className="text-start list-inside list-disc">
-                        <li>POST -> /register</li>
-                        <li>POST -> /login</li>
-                        <li>POST -> /otp-confirmation</li>
-                        <li>POST-> /profile</li>
+                        <li>POST /register</li>
+                        <li>POST /login</li>
+                        <li>POST /otp-confirmation</li>
+                        <li>POST/profile</li>
                       </ul>
                     </li>
                     <li>
@@ -76,11 +76,11 @@ export default function BackEndProject() {
                         <b>Category</b>, Have 5 Endpoint:
                       </h1>
                       <ul className="text-start list-inside list-disc">
-                        <li>GET -> /kategori</li>
-                        <li>POST -> /Kategori</li>
-                        <li>GET -> /kategori/:id</li>
-                        <li>DELETE -> /kategori/:id</li>
-                        <li>PUT/PATCH -> /kategori/:id</li>
+                        <li>GET  /kategori</li>
+                        <li>POST /Kategori</li>
+                        <li>GET /kategori/:id</li>
+                        <li>DELETE /kategori/:id</li>
+                        <li>PUT/PATCH /kategori/:id</li>
                       </ul>
                     </li>
                     <li>
@@ -88,9 +88,9 @@ export default function BackEndProject() {
                         <b>Peminjaman</b>, Have 3 Endpoint:
                       </h1>
                       <ul className="text-start list-inside list-disc">
-                        <li>GET -> /peminjaman</li>
-                        <li>GET -> /peminjaman/:id</li>
-                        <li>POST -> /buku/:id/peminjaman</li>
+                        <li>GET /peminjaman</li>
+                        <li>GET /peminjaman/:id</li>
+                        <li>POST /buku/:id/peminjaman</li>
                       </ul>
                     </li>
                     <li>
@@ -98,11 +98,11 @@ export default function BackEndProject() {
                         <b>Book</b>, Have 5 Endpoint:
                       </h1>
                       <ul className="text-start list-inside list-disc">
-                        <li>GET -> /buku</li>
-                        <li>POST -> /buku</li>
-                        <li>GET -> /buku/:id</li>
-                        <li>DELETE -> /buku/:id</li>
-                        <li>PUT/PATCH -> /buku/:id</li>
+                        <li>GET /buku</li>
+                        <li>POST /buku</li>
+                        <li>GET /buku/:id</li>
+                        <li>DELETE /buku/:id</li>
+                        <li>PUT/PATCH /buku/:id</li>
                       </ul>
                     </li>
                   </ul>
@@ -168,14 +168,14 @@ export default function BackEndProject() {
                 to="https://gitlab.com/adityaaprianto97/final-project-aditya-aprianto-bds-nodejs-sanbercode-batch-48"
                 target="_blank"
               >
-                <Button color="primary">GO TO REPOSITORY</Button>
+                <Button color="primary" className="text-md shadow-sm font-semibold rounded-full hover:shadow-md transition-all duration-300 px-8">GO TO REPOSITORY</Button>
               </Link>
             </div>
           </Hero.Content>
         </Hero>
         <Divider>Movie Rental API</Divider>
-        <Hero className="py-10">
-          <Hero.Content className="flex flex-col bg-slate-200">
+        <Hero className="py-10 bg-base-100">
+          <Hero.Content className="flex flex-col w-full max-w-6xl">
             <div className="flex flex-col">
               <h1 className="text-4xl font-bold">Movie Rental API</h1>
               <h1 className="text-xl font-semibold sm:px-48 py-10">
@@ -340,7 +340,7 @@ export default function BackEndProject() {
                 to="https://gitlab.com/adityaaprianto97/final-project-aditya-aprianto-pbd-sanbercode-batch-46"
                 target="_blank"
               >
-                <Button color="primary">GO TO REPOSITORY</Button>
+                <Button color="primary" className="text-md shadow-sm font-semibold rounded-full hover:shadow-md transition-all duration-300 px-8">GO TO REPOSITORY</Button>
               </Link>
             </div>
           </Hero.Content>

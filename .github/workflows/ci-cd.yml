@@ -9,7 +9,7 @@ on:
       - main
 
 jobs:
-  # JOB 1: Dijalankan di server GitHub (gratis & tidak membebani server Anda)
+  # JOB 1: Dijalankan di server GitHub
   build-and-test:
     name: Build and Test
     runs-on: ubuntu-latest
@@ -30,7 +30,7 @@ jobs:
       - name: Build Project
         run: npm run build
 
-  # JOB 2: Dijalankan di server GitHub (gratis & tidak membebani server Anda)
+  # JOB 2: Dijalankan di server GitHub
   docker-build-and-push:
     name: Docker Build and Push
     needs: build-and-test
@@ -59,11 +59,11 @@ jobs:
           cache-from: type=registry,ref=${{ secrets.DOCKERHUB_USERNAME }}/porto-app:buildcache
           cache-to: type=registry,ref=${{ secrets.DOCKERHUB_USERNAME }}/porto-app:buildcache,mode=max
 
-  # JOB 3: Dijalankan LANGSUNG di server Anda tanpa perlu akses SSH
+  # JOB 3: Dijalankan LANGSUNG di server tanpa perlu akses SSH
   deploy:
     name: Deploy to Server
     needs: docker-build-and-push
-    runs-on: self-hosted # <--- Telah diubah menggunakan server Anda
+    runs-on: self-hosted # <--- Telah diubah menggunakan server
     if: github.event_name == 'push' && github.ref == 'refs/heads/main'
     
     steps:
